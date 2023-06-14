@@ -50,10 +50,9 @@ class ExerciseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(Exercise $exercise)
     {
-        $exercise = Exercise::find($id); // find = zoek op ID
-        return(['exercise' => $exercise]);
+        return $exercise;
     }
 
     /**
