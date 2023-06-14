@@ -15,23 +15,23 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-        // Log::info(
-        //     'Students index',
-        //     [
-        //         'ip' => $request->ip(),
-        //         'data' => $request->all()
-        //     ]
-        // );
+        Log::info(
+            'Students index',
+            [
+                'ip' => $request->ip(),
+                'data' => $request->all()
+            ]
+        );
 
-        // if ($request->has('first_name')) {
-        //     $data = Student::where('first_name', 'like', '%' . $request->title . '%')->get();
-        // } else if ($request->has('sort')) {
-        //     $data =  Student::orderBy($request->sort)->get();
-        // } else {
-        //    return $data = Student::all();
-        // }
+        if ($request->has('first_name')) {
+            $data = Student::where('first_name', 'like', '%' . $request->title . '%')->get();
+        } else if ($request->has('sort')) {
+            $data =  Student::orderBy($request->sort)->get();
+        } else {
+           return $data = Student::all();
+        }
 
-        return Student::all();
+        // return Student::all();
     }
 
     /**

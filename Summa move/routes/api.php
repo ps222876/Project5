@@ -30,6 +30,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return auth()->user();
     });
     
-Route::apiResource('exercises', ExerciseController::class);
-Route::apiResource('students', StudentController::class);
-});
+    });
+    Route::apiResource('exercises', ExerciseController::class);
+    Route::apiResource('students', StudentController::class);
