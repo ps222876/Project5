@@ -18,6 +18,7 @@ class StudentsTableSeeder extends Seeder
         DB::table('students')->insert([
             'first_name' => 'Khaled',
             'last_name' => 'Hajjar',
+            'class' => 'SD2A'
         ]);
 
 
@@ -26,6 +27,7 @@ class StudentsTableSeeder extends Seeder
          DB::table('students')->insert([
             'first_name' => 'Sid',
             'last_name' => 'Brinkmans',
+            'class' => 'SD2A'
         ]);
 
 
@@ -34,6 +36,7 @@ class StudentsTableSeeder extends Seeder
          DB::table('students')->insert([
             'first_name' => 'Bashar',
             'last_name' => 'Abdin',
+            'class' => 'SD2A'
         ]);
     }
 }
