@@ -86,8 +86,16 @@ class ExerciseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, Exercise $exercise)
     {
-        //
+        Log::info('delete videos', ['data' => $exercise]);
+        $request->user()->currentAccessToken()->delete();
+        $exercise->delete(); 
+        $response = [
+            'success' => true,
+            'access_token' => auth()->user()->createToken('API Token')->plainTextToken,
+            'token_type' => 'Bearer'
+        ];
+        return response()->json($response, 200);
     }
 }
