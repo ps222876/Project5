@@ -63,7 +63,8 @@ class ExerciseController extends Controller
         Log::info('update exercises', ['ip' => $request->ip(), 'old' => $exercise, 'new' => $request->all()]);
 
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
+            'name' => 'required',
+            'instruction_nl' => 'required',
         ]);
         if ($validator->fails()) {
             Log::error("exercise can not be updated");
