@@ -37,7 +37,14 @@ class ExerciseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->user()->currentAccessToken()->delete();
+        $response = [
+            'success' => true,
+            'data'    => Exercise::create($request->all()),
+            'access_token' => auth()->user()->createToken('API Token')->plainTextToken,
+            'token_type' => 'Bearer'
+        ];
+        return response()->json($response, 200);
     }
 
     /**
@@ -52,9 +59,28 @@ class ExerciseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Exercise $exercise)
     {
-        //
+        Log::info('update exercises', ['ip' => $request->ip(), 'old' => $exercise, 'new' => $request->all()]);
+
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+        ]);
+        if ($validator->fails()) {
+            Log::error("exercise can not be updated");
+            return response('{"Foutmelding":"Data not correct"}', 400)->header('Content-Type', 'application/json');
+        }
+
+
+        $request->user()->currentAccessToken()->delete();
+        $exercise->update($request->all());
+        $response = [
+            'success' => true,
+            'data'    =>  $exercise,
+            'access_token' => auth()->user()->createToken('API Token')->plainTextToken,
+            'token_type' => 'Bearer'
+        ];
+        return response()->json($response, 200);
     }
 
     /**
