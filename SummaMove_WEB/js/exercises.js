@@ -47,7 +47,7 @@ const fillTable = () => {
             instruction_nl: '${el.instruction_nl}',
             instruction_en: '${el.instruction_en}'
         }, this)">Selecteer</td>
-        <td>${el.name}</td><td>${Floor(el.instructoin_nl)}</td><td>${Floor(el.instruction_en)}</td>
+        <td>${el.name}</td><td>${Floor(el.instruction_nl)}</td><td>${Floor(el.instruction_en)}</td>
         <td onclick="deleteComponent(${el.id})" style="display: none;"> x </td></tr>`)
 }
     if (tabelInhoud == '') {
@@ -99,6 +99,7 @@ const login = async () => {
         
         document.getElementById("loginForm").style.display = "none"
         document.getElementById("createForm").style.display = "inline"
+        document.querySelectorAll(".tableContainer").forEach(tableContainer => tableContainer.style = "max-height: 33vh;")
         document.querySelectorAll("td:last-child").forEach(el => el.style.display = "inline")
         if (selectedExercise != undefined) {
             document.getElementById("updateForm").style.display = "inline"
@@ -202,8 +203,8 @@ const select = async (exercise, button) => {
         document.getElementById("updateForm").style.display = "initial"
     }
     document.getElementById("nameEdit").value = exercise.name
-    document.getElementById("instruction_nl").value = exercise.instruction_nl
-    document.getElementById("instruction_en").value = exercise.instruction_en
+    document.getElementById("instruction_nlEdit").value = exercise.instruction_nl
+    document.getElementById("instruction_enEdit").value = exercise.instruction_en
 
     await showSelected()
     
