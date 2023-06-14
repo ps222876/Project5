@@ -37,6 +37,17 @@ class ExerciseController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'instruction_nl' => 'required',
+        ]);
+        
+        if ($validator->fails()) {
+            Log::error("exercise can not be created");
+            return response('{"Foutmelding":"Data not correct"}', 400)->header('Content-Type', 'application/json');
+        }
+
+
         $request->user()->currentAccessToken()->delete();
         $response = [
             'success' => true,
@@ -44,7 +55,7 @@ class ExerciseController extends Controller
             'access_token' => auth()->user()->createToken('API Token')->plainTextToken,
             'token_type' => 'Bearer'
         ];
-        return response()->json($response, 200);
+        return response()->json($response, 201);
     }
 
     /**
@@ -66,6 +77,7 @@ class ExerciseController extends Controller
             'name' => 'required',
             'instruction_nl' => 'required',
         ]);
+        
         if ($validator->fails()) {
             Log::error("exercise can not be updated");
             return response('{"Foutmelding":"Data not correct"}', 400)->header('Content-Type', 'application/json');
