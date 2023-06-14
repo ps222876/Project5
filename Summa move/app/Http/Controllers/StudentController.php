@@ -39,6 +39,19 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'class' => 'required',
+        ]);
+        if ($validator->fails()) {
+            Log::error("student can not be created");
+            return response('{"Foutmelding":"Data not correct"}', 400)->header('Content-Type', 'application/json');
+        }
+
+
+
         $request->user()->currentAccessToken()->delete();
         $response = [
             'success' => true,
