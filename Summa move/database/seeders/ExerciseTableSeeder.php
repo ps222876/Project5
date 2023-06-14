@@ -17,8 +17,8 @@ class ExerciseTableSeeder extends Seeder
         #1
         DB::table('exercises')->insert([
             'name' => 'Squat',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -26,8 +26,8 @@ class ExerciseTableSeeder extends Seeder
         #2
         DB::table('exercises')->insert([
             'name' => 'Push-up',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -36,8 +36,8 @@ class ExerciseTableSeeder extends Seeder
         #3
         DB::table('exercises')->insert([
             'name' => 'Dip',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -47,8 +47,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Plank',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -58,8 +58,8 @@ class ExerciseTableSeeder extends Seeder
         #5
         DB::table('exercises')->insert([
             'name' => 'Paardentrap',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -70,8 +70,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Mountain climber',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -81,8 +81,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Burpee',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -92,8 +92,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Lunge',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -103,8 +103,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Wall sit',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -114,8 +114,8 @@ class ExerciseTableSeeder extends Seeder
 
         DB::table('exercises')->insert([
             'name' => 'Crunch',
-            'instructon_nl' => 'test_nl',
-            'instructon_en' => 'test_en',
+            'instruction_nl' => 'test_nl',
+            'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);

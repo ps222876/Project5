@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
     Route::post('/exercises', [ExerciseController::class, 'store']); //)->middleware('auth');
     Route::put('/exercises/{id}', [ExerciseController::class, 'update']); //)->middleware('auth');
-    Route::delet('/exercises/{id}', [ExerciseController::class, 'update']); //)->middleware('auth');
+    Route::delete('/exercises/{id}', [ExerciseController::class, 'destroy']); //)->middleware('auth');
 });
 
 
