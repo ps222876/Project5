@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="css/form.css">
 </head>
-<body>
+<body onload="load()">
     <header>
         <a href="index.html">
             <img src="assets/Soccer_logo.png" alt="SummaMove">
@@ -26,6 +26,7 @@
             <div class="tableContainer">
                 <table>
                     <tr>
+                        <th><!--Select--></th>
                         <th>Naam</th>
                         <th>Instructie Nederlands</th>
                         <th>Instructie Engels</th>
@@ -76,4 +77,5 @@
 </body>
 </html>
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/exercises.js"></script>
