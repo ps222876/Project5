@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('instruction_nl');
-            $table->string('instructon_en');
+            $table->string('instruction_en');
             $table->timestamps();
         });
     }
