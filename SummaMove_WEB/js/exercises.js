@@ -38,7 +38,7 @@ const fillTable = () => {
                 instruction_en: '${el.instruction_en}'
             }, this)">Selecteer</td>
             <td>${el.name}</td><td>${Floor(el.instruction_nl)}</td><td>${Floor(el.instruction_en)}</td>
-            <td onclick="deleteComponent(${el.id})"> x </td></tr>`)
+            <td onclick="remove(${el.id})"> x </td></tr>`)
     }
     else {
         exercises.map(el => tabelInhoud += `<tr><td class="selectButton" onclick="select({
@@ -48,7 +48,7 @@ const fillTable = () => {
             instruction_en: '${el.instruction_en}'
         }, this)">Selecteer</td>
         <td>${el.name}</td><td>${Floor(el.instruction_nl)}</td><td>${Floor(el.instruction_en)}</td>
-        <td onclick="deleteComponent(${el.id})" style="display: none;"> x </td></tr>`)
+        <td onclick="remove(${el.id})" style="display: none;"> x </td></tr>`)
 }
     if (tabelInhoud == '') {
         tabelInhoud = "Er zijn geen oefeningen gevonden."
@@ -136,7 +136,7 @@ const add = async () => {
     }
 }
 
-const edit = async () => {
+const update = async () => {
     try {
         const name = document.getElementById("nameEdit").value
         const instruction_nl = document.getElementById("instruction_nlEdit").value
