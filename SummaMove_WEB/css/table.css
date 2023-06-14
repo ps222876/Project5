@@ -1,0 +1,33 @@
+table {
+    align-self: flex-start;
+    width: 100%;
+}
+main .tableContainer {
+    max-height: 55vh; /* 40vh with create form */
+    overflow: auto;
+}
+th, td {
+    text-align: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    max-width: 20ch;
+    overflow: hidden;
+}
+td:last-child {
+    color: red;
+    cursor: pointer;
+    width: 20px;
+}
+
+.selectButton {
+    color: blue;
+    text-decoration: underline;
+    width: 65px;
+}
+.selectButton:hover {
+    color: darkblue;
+    cursor: pointer;
+}
+.selected {
+    color: green;
+}
