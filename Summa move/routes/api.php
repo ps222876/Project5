@@ -29,7 +29,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('profile', function (Request $request) {
         return auth()->user();
     });
-    
-    });
-    Route::apiResource('exercises', ExerciseController::class);
-    Route::apiResource('students', StudentController::class);
+    Route::post('/exercises', [ExerciseController::class, 'store']); //)->middleware('auth');
+    Route::put('/exercises/{id}', [ExerciseController::class, 'update']); //)->middleware('auth');
+    Route::delet('/exercises/{id}', [ExerciseController::class, 'update']); //)->middleware('auth');
+});
+
+
+Route::get('/exercises', [ExerciseController::class, 'index']);
+Route::get('/exercises/{id}', [ExerciseController::class, 'show']);
+
+Route::get('/students', [StudentController::class, 'index']);
+Route::get('/students/{id}', [StudentController::class, 'show']);
+
