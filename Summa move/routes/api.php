@@ -29,7 +29,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('profile', function (Request $request) {
         return auth()->user();
     });
-    
-    });
-    Route::apiResource('exercises', ExerciseController::class);
-    Route::apiResource('students', StudentController::class);
+
+    Route::apiResource('exercises', ExerciseController::class)->except('index', 'show');
+    Route::apiResource('students', StudentController::class)->except('index', 'show');
+});
+
+Route::apiResource('exercises', ExerciseController::class)->only('index', 'show');
+Route::apiResource('students', StudentController::class)->only('index', 'show');
