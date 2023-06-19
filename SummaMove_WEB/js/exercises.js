@@ -234,8 +234,14 @@ const deSelect = async () => {
 }
 
 const Floor = (str) => {
-    const maxCharLength = screen.width / 37
-    if (str.length > maxCharLength) {
-        return str.slice(0, maxCharLength - 3) + "..."
-    } return str
+    try {
+        const maxCharLength = screen.width / 37
+        if (str.length > maxCharLength) {
+            return str.slice(0, maxCharLength - 3) + "..."
+        } return str
+    }
+    catch (error) {
+        console.log("couldn't floor instruction.", error)
+        return "Onbeschikbaar"
+    }
 }
