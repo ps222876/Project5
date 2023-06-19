@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummaMove</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/split.css">
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body onload="load()">
+    <header>
+        <a href="index.html">
+            <img src="assets/Soccer_logo.png" alt="SummaMove">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="exercises.html">Oefeningen</a>
+            <a href="students.html" class="navActive">Studenten</a>
+        </nav>
+    </header>
+    <main>
+        <div id="primary">
+            <h2>Studenten</h2>
+            <div class="tableContainer">
+                <table>
+                    <tr>
+                        <th><!--Select--></th>
+                        <th>Voornaam</th>
+                        <th>Achternaam</th>
+                        <th>Klas</th>
+                    </tr>
+                    <tbody id="index"/>
+                </table>    
+            </div>
+        </div>
+        <div id="line"></div>
+        <div id="secondary">
+            <h2 id="title"></h2>
+            <div id="content"></div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span>&copy; Bashar</span> 
+            <span>&copy; Kahlet</span> 
+            <span>&copy; Sid</span> 
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/students.js"></script>
