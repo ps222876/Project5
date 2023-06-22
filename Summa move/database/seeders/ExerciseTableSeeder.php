@@ -17,7 +17,13 @@ class ExerciseTableSeeder extends Seeder
         #1
         DB::table('exercises')->insert([
             'name' => 'Squat',
-            'instruction_nl' => 'test_nl',
+            'instruction_nl' => 'Stand with your feet shoulder-width apart. \nEngage your core and maintain a straight back. \nBend your knees and lower your body as if sitting back into a chair.
+            Keep your weight on your heels and lower until your thighs are parallel to the ground.
+            Push through your heels to return to the starting position.
+            Repeat for the desired number of repetitions.
+            Remember to breathe consistently throughout the movement.
+            Start with bodyweight squats and progress to adding weights if desired.
+            Ensure proper form and consult a professional if needed.',
             'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
