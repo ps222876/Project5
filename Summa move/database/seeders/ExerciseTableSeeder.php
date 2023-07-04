@@ -14,20 +14,31 @@ class ExerciseTableSeeder extends Seeder
      */
     public function run(): void
     {
-        #1
         DB::table('exercises')->insert([
             'name' => 'Squat',
-            'instruction_nl' => 'Stand with your feet shoulder-width apart. \nEngage your core and maintain a straight back. \nBend your knees and lower your body as if sitting back into a chair.
-            Keep your weight on your heels and lower until your thighs are parallel to the ground.
-            Push through your heels to return to the starting position.
-            Repeat for the desired number of repetitions.
-            Remember to breathe consistently throughout the movement.
-            Start with bodyweight squats and progress to adding weights if desired.
-            Ensure proper form and consult a professional if needed.',
+            'instruction_nl' => 'test_nl',
             'instruction_en' => 'test_en',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
+
+        #1
+        // DB::table('exercises')->insert([
+        //     'name' => 'Squat',
+        //     'instruction_nl' => '1. Sta met je voeten op schouderbreedte uit elkaar en je tenen iets naar buiten gedraaid.' .
+        //      "\n 2. Span je buikspieren aan en houd je rug recht gedurende de oefening." .
+        //      "\n 3. Buig je knieën en duw je heupen naar achteren alsof je in een stoel gaat zitten" .
+        //      "\n 4. Houd je knieën in lijn met je tenen en zak door tot je dijen parallel zijn aan de vloer. " .
+        //      "\n 5. Duw door je hielen en strek je benen om terug te keren naar de startpositie. ",
+             
+        //     'instruction_en' => '1.	Stand with your feet shoulder-width apart and your toes slightly turned out.' .
+        //     "\n 2.	Engage your core muscles and keep your back straight throughout the exercise." .
+        //     "\n 3.	Lower your body by bending your knees and pushing your hips back as you are sitting in a chair." .
+        //     "\n 4.	Keep your knees in line with your toes and lower your body until your thighs are parallel to the floor." .
+        //     "\n 5.	Engage your core muscles and keep your back straight throughout the exercise." ,
+        //     'created_at' => Carbon::now(),
+        //     'updated_at' => Carbon::now()
+        // ]);
 
         #2
         DB::table('exercises')->insert([
